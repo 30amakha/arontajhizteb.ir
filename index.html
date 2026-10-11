@@ -6,23 +6,21 @@
 <title>آرون تجهیز طب | تجهیزات و ملزومات الکتروسرجری</title>
 <meta name="description" content="آرون تجهیز طب — تأمین، فروش، تعمیر و سرویس تجهیزات الکتروسرجری، هندپیس، پدال، الکترود و لوازم جانبی.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --primary:#D32F2F;
-    --primary-dark:#B71C1C;
-    --primary-light:#FFEBEE;
-    --accent:#1565C0;
-    --surface:#FFFFFF;
-    --bg:#F5F6F8;
-    --text:#1C1B1F;
-    --text-muted:#5F6368;
-    --outline:#E0E0E0;
-    --shadow-sm:0 1px 3px rgba(0,0,0,.08);
-    --shadow-md:0 4px 12px rgba(0,0,0,.10);
-    --shadow-lg:0 8px 24px rgba(0,0,0,.12);
-    --radius:16px;
-    --radius-sm:12px;
+    --primary:#E53935;
+    --primary-dark:#C62828;
+    --primary-soft:#FFEBEE;
+    --bg:#FFFFFF;
+    --bg-alt:#FAFAFA;
+    --text:#1A1A1A;
+    --text-muted:#6B6B6B;
+    --line:#EFEFEF;
+    --line-strong:#E0E0E0;
+    --radius:14px;
+    --radius-sm:10px;
+    --wa:#25D366;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -30,228 +28,252 @@
     font-family:'Vazirmatn',sans-serif;
     background:var(--bg);
     color:var(--text);
-    line-height:1.8;
+    line-height:1.75;
     -webkit-font-smoothing:antialiased;
   }
   a{text-decoration:none;color:inherit;}
   img{max-width:100%;display:block;}
-
-  /* ===== Logo ===== */
-  .logo-wrap{display:flex;align-items:center;}
-  .logo-wrap svg{height:52px;width:auto;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
 
   /* ===== Header ===== */
   header{
     position:sticky;top:0;z-index:100;
-    background:rgba(255,255,255,.94);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--outline);
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
   }
   .nav{
-    max-width:1200px;margin:0 auto;
-    padding:12px 24px;
+    max-width:1180px;margin:0 auto;
+    padding:14px 24px;
     display:flex;align-items:center;justify-content:space-between;
   }
-  .nav-links{display:flex;gap:6px;}
+  .logo-wrap{display:flex;align-items:center;gap:10px;}
+  .logo-mark{
+    width:38px;height:38px;border-radius:10px;
+    background:var(--primary);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:800;font-size:1.15rem;
+  }
+  .logo-text{display:flex;flex-direction:column;line-height:1.2;}
+  .logo-text strong{font-size:1rem;font-weight:700;}
+  .logo-text span{font-size:.72rem;color:var(--text-muted);font-weight:400;}
+  .nav-links{display:flex;gap:4px;}
   .nav-links a{
-    padding:8px 16px;border-radius:100px;
-    font-size:.92rem;color:var(--text-muted);
+    padding:8px 14px;border-radius:100px;
+    font-size:.9rem;color:var(--text-muted);
     transition:.2s;
   }
-  .nav-links a:hover{background:var(--primary-light);color:var(--primary);}
+  .nav-links a:hover{background:var(--primary-soft);color:var(--primary);}
 
   /* ===== Hero ===== */
   .hero{
-    max-width:1200px;margin:0 auto;
-    padding:64px 24px 48px;
-    display:grid;grid-template-columns:1.1fr .9fr;
-    gap:48px;align-items:center;
+    max-width:1180px;margin:0 auto;
+    padding:72px 24px 56px;
+    display:grid;grid-template-columns:1.05fr .95fr;
+    gap:56px;align-items:center;
+  }
+  .hero-badge{
+    display:inline-block;
+    padding:6px 14px;border-radius:100px;
+    background:var(--primary-soft);color:var(--primary);
+    font-size:.82rem;font-weight:600;
+    margin-bottom:18px;
   }
   .hero h1{
-    font-size:2.6rem;font-weight:700;line-height:1.4;
-    margin-bottom:16px;
+    font-size:2.7rem;font-weight:800;line-height:1.35;
+    margin-bottom:18px;
   }
   .hero h1 span{color:var(--primary);}
   .hero p{
-    font-size:1.05rem;color:var(--text-muted);
-    margin-bottom:32px;max-width:520px;
+    font-size:1.02rem;color:var(--text-muted);
+    margin-bottom:32px;max-width:500px;
   }
   .btn-row{display:flex;gap:12px;flex-wrap:wrap;}
   .btn{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:14px 28px;border-radius:100px;
-    font-family:inherit;font-size:.98rem;font-weight:600;
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 26px;border-radius:100px;
+    font-family:inherit;font-size:.95rem;font-weight:600;
     cursor:pointer;border:none;transition:.2s;
   }
-  .btn-filled{background:var(--primary);color:#fff;box-shadow:var(--shadow-sm);}
-  .btn-filled:hover{background:var(--primary-dark);box-shadow:var(--shadow-md);}
+  .btn-filled{background:var(--primary);color:#fff;}
+  .btn-filled:hover{background:var(--primary-dark);}
   .btn-outlined{
-    background:transparent;color:var(--primary);
-    border:1.5px solid var(--primary);
+    background:transparent;color:var(--text);
+    border:1.5px solid var(--line-strong);
   }
-  .btn-outlined:hover{background:var(--primary-light);}
+  .btn-outlined:hover{border-color:var(--primary);color:var(--primary);}
 
   .hero-visual{
-    aspect-ratio:1/1;border-radius:24px;
-    background:linear-gradient(135deg,#FFF 0%,#FFEBEE 100%);
     display:flex;align-items:center;justify-content:center;
-    box-shadow:var(--shadow-lg);
-    position:relative;overflow:hidden;
+    padding:16px;
   }
-  .hero-visual::before{
-    content:"";position:absolute;width:180%;height:180%;
-    background:radial-gradient(circle,rgba(211,47,47,.08) 0%,transparent 60%);
-  }
-  .hero-visual .placeholder{
-    font-size:.9rem;color:var(--text-muted);
-    text-align:center;padding:20px;z-index:1;
+  .hero-visual img{
+    width:100%;max-width:480px;
+    border-radius:20px;
   }
 
-  /* ===== Section base ===== */
-  section{padding:56px 24px;}
-  .container{max-width:1200px;margin:0 auto;}
-  .section-head{text-align:center;margin-bottom:40px;}
-  .section-head h2{
-    font-size:1.9rem;font-weight:700;margin-bottom:8px;
+  /* ===== Section ===== */
+  section{padding:72px 0;}
+  .section-alt{background:var(--bg-alt);}
+  .section-head{text-align:center;margin-bottom:48px;}
+  .section-head .kicker{
+    display:inline-block;
+    color:var(--primary);font-size:.85rem;font-weight:700;
+    letter-spacing:.5px;margin-bottom:8px;
   }
-  .section-head p{color:var(--text-muted);font-size:1rem;}
+  .section-head h2{font-size:2rem;font-weight:800;margin-bottom:10px;}
+  .section-head p{color:var(--text-muted);font-size:1rem;max-width:520px;margin:0 auto;}
 
-  /* ===== Product cards ===== */
+  /* ===== Products ===== */
   .grid-3{
     display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
   }
   .card{
-    background:var(--surface);border-radius:var(--radius);
-    box-shadow:var(--shadow-sm);overflow:hidden;
+    background:#fff;border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;
     transition:.25s;display:flex;flex-direction:column;
   }
-  .card:hover{box-shadow:var(--shadow-md);}
+  .card:hover{border-color:var(--primary);}
   .card-img{
-    aspect-ratio:4/3;background:#F0F1F3;
+    aspect-ratio:4/3;background:var(--bg-alt);
     display:flex;align-items:center;justify-content:center;
-    color:var(--text-muted);font-size:.85rem;
-    border-bottom:1px solid var(--outline);
+    overflow:hidden;border-bottom:1px solid var(--line);
+    padding:14px;
   }
+  .card-img img{
+    width:100%;height:100%;object-fit:contain;
+    transition:transform .35s ease;
+  }
+  .card:hover .card-img img{transform:scale(1.05);}
   .card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
-  .card-body h3{font-size:1.08rem;font-weight:600;margin-bottom:6px;}
-  .card-body .short{color:var(--text-muted);font-size:.9rem;margin-bottom:12px;}
+  .card-body h3{font-size:1.05rem;font-weight:700;margin-bottom:6px;}
+  .card-body .short{color:var(--text-muted);font-size:.88rem;margin-bottom:14px;}
 
   .more-content{
-    max-height:0;overflow:hidden;
+    max-height:0;overflow:hidden;opacity:0;
     transition:max-height .4s ease, opacity .3s ease;
-    opacity:0;
-    font-size:.88rem;color:var(--text-muted);
+    font-size:.85rem;color:var(--text-muted);
   }
   .more-content.open{
     max-height:700px;opacity:1;margin-top:12px;
-    padding-top:12px;border-top:1px dashed var(--outline);
+    padding-top:12px;border-top:1px dashed var(--line-strong);
   }
-  .more-content ul{padding-right:18px;margin-top:8px;}
-  .more-content li{margin-bottom:4px;}
+  .more-content ul{padding-right:18px;margin-top:6px;}
+  .more-content li{margin-bottom:3px;}
   .toggle-btn{
     background:none;border:none;font-family:inherit;
-    color:var(--primary);font-weight:600;font-size:.9rem;
+    color:var(--primary);font-weight:700;font-size:.88rem;
     cursor:pointer;padding:8px 0;text-align:right;
     display:inline-flex;align-items:center;gap:6px;
     margin-top:auto;
   }
   .toggle-btn:hover{color:var(--primary-dark);}
-  .toggle-btn .arrow{transition:transform .3s;}
+  .toggle-btn .arrow{transition:transform .3s;font-size:.7rem;}
   .toggle-btn.open .arrow{transform:rotate(180deg);}
 
   /* ===== Services ===== */
-  .services{background:var(--surface);}
-  .service-list{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  .service-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
   }
   .service-item{
-    padding:28px 24px;border-radius:var(--radius-sm);
-    background:var(--bg);border:1px solid var(--outline);
+    padding:26px 22px;border-radius:var(--radius-sm);
+    background:#fff;border:1px solid var(--line);
     transition:.2s;
   }
-  .service-item:hover{border-color:var(--primary);background:var(--primary-light);}
+  .service-item:hover{border-color:var(--primary);background:var(--primary-soft);}
   .service-item .icon{
-    width:48px;height:48px;border-radius:12px;
-    background:var(--primary);color:#fff;
+    width:44px;height:44px;border-radius:10px;
+    background:var(--primary-soft);color:var(--primary);
     display:flex;align-items:center;justify-content:center;
-    font-size:1.3rem;margin-bottom:14px;
+    font-size:1.25rem;margin-bottom:14px;
   }
-  .service-item h3{font-size:1.05rem;font-weight:600;margin-bottom:6px;}
-  .service-item p{font-size:.88rem;color:var(--text-muted);}
+  .service-item:hover .icon{background:#fff;}
+  .service-item h3{font-size:1rem;font-weight:700;margin-bottom:6px;}
+  .service-item p{font-size:.85rem;color:var(--text-muted);}
 
-  .repair-highlight{
-    max-width:1200px;margin:0 auto 40px;
-    background:linear-gradient(135deg,#FFF3F3 0%,#FFEBEE 100%);
-    border-right:5px solid var(--primary);
+  .repair-banner{
+    margin-top:48px;
+    background:linear-gradient(135deg,#FFF5F5 0%,#FFEBEE 100%);
+    border:1px solid #FFCDD2;
     border-radius:var(--radius);
-    padding:32px;
+    padding:36px 32px;
     display:flex;gap:24px;align-items:center;
-    box-shadow:var(--shadow-sm);
+    position:relative;overflow:hidden;
   }
-  .repair-highlight .big-icon{font-size:3rem;flex-shrink:0;}
-  .repair-highlight h3{
-    font-size:1.3rem;font-weight:700;margin-bottom:8px;color:var(--primary-dark);
+  .repair-banner::before{
+    content:"";position:absolute;
+    top:0;right:0;width:6px;height:100%;
+    background:var(--primary);
   }
-  .repair-highlight p{color:var(--text-muted);font-size:.95rem;}
+  .repair-banner .big-icon{font-size:2.6rem;flex-shrink:0;}
+  .repair-banner h3{
+    font-size:1.25rem;font-weight:800;
+    color:var(--primary-dark);margin-bottom:8px;
+  }
+  .repair-banner p{color:#7A4A4A;font-size:.93rem;}
 
-  /* ===== Contact CTA ===== */
-  .cta{
-    background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);
-    color:#fff;border-radius:24px;
-    padding:48px 32px;text-align:center;
-    max-width:1200px;margin:0 auto;
+  /* ===== Contact ===== */
+  .contact-card{
+    max-width:820px;margin:0 auto;
+    background:#fff;border:1px solid var(--line);
+    border-radius:20px;padding:48px 32px;
+    text-align:center;
   }
-  .cta h2{font-size:1.8rem;font-weight:700;margin-bottom:10px;}
-  .cta p{opacity:.9;margin-bottom:28px;}
-  .cta-buttons{
-    display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+  .contact-card h2{font-size:1.85rem;font-weight:800;margin-bottom:8px;}
+  .contact-card p{color:var(--text-muted);margin-bottom:30px;}
+  .contact-buttons{
+    display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
   }
-  .cta .btn{
-    background:#fff;color:var(--primary);
-    font-size:1rem;padding:14px 30px;
-  }
-  .cta .btn:hover{background:#FFEBEE;}
-  .cta .btn-wa{background:#25D366;color:#fff;}
-  .cta .btn-wa:hover{background:#1DA851;color:#fff;}
-  .cta .btn-ig{
+  .contact-buttons .btn{padding:14px 26px;font-size:.95rem;}
+  .btn-wa{background:var(--wa);color:#fff;}
+  .btn-wa:hover{background:#1DA851;}
+  .btn-ig{
     background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);
     color:#fff;
   }
-  .cta .btn-ig:hover{opacity:.9;}
+  .btn-ig:hover{opacity:.92;}
+  .btn-tel{
+    background:var(--primary);color:#fff;
+  }
+  .btn-tel:hover{background:var(--primary-dark);}
 
   /* ===== Footer ===== */
   footer{
-    background:#1C1B1F;color:#B0B0B0;
-    padding:40px 24px 24px;margin-top:64px;
+    background:#111;color:#999;
+    padding:48px 24px 24px;margin-top:0;
   }
   .footer-inner{
-    max-width:1200px;margin:0 auto;
-    display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;
+    max-width:1180px;margin:0 auto;
+    display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;
   }
-  .footer-inner h4{color:#fff;font-size:1rem;margin-bottom:14px;font-weight:600;}
-  .footer-inner p,.footer-inner a{font-size:.9rem;color:#B0B0B0;line-height:2;}
+  .footer-inner h4{color:#fff;font-size:.95rem;margin-bottom:14px;font-weight:700;}
+  .footer-inner p,.footer-inner a{font-size:.88rem;color:#999;line-height:2;}
   .footer-inner a:hover{color:#fff;}
-  .footer-logo svg{height:60px;width:auto;margin-bottom:12px;}
   .footer-bottom{
-    max-width:1200px;margin:32px auto 0;
-    padding-top:20px;border-top:1px solid #333;
-    text-align:center;font-size:.82rem;color:#888;
+    max-width:1180px;margin:32px auto 0;
+    padding-top:20px;border-top:1px solid #2A2A2A;
+    text-align:center;font-size:.8rem;color:#666;
   }
 
   /* ===== Responsive ===== */
-  @media(max-width:900px){
-    .hero{grid-template-columns:1fr;gap:32px;padding-top:40px;}
-    .hero h1{font-size:2rem;}
-    .grid-3,.service-list{grid-template-columns:1fr 1fr;}
+  @media(max-width:960px){
+    .hero{grid-template-columns:1fr;gap:36px;padding-top:48px;text-align:center;}
+    .hero p{margin-left:auto;margin-right:auto;}
+    .btn-row{justify-content:center;}
+    .hero h1{font-size:2.1rem;}
+    .hero-visual img{max-width:380px;}
+    .grid-3,.service-grid{grid-template-columns:1fr 1fr;}
     .footer-inner{grid-template-columns:1fr 1fr;}
-    .repair-highlight{flex-direction:column;text-align:center;padding:24px;}
+    .repair-banner{flex-direction:column;text-align:center;padding:28px;}
   }
   @media(max-width:600px){
     .nav-links{display:none;}
-    .hero h1{font-size:1.6rem;}
-    .grid-3,.service-list{grid-template-columns:1fr;}
+    .hero h1{font-size:1.7rem;}
+    .grid-3,.service-grid{grid-template-columns:1fr;}
     .footer-inner{grid-template-columns:1fr;}
-    .section-head h2{font-size:1.5rem;}
+    .section-head h2{font-size:1.55rem;}
+    .contact-card{padding:32px 20px;}
+    .contact-card h2{font-size:1.5rem;}
   }
 </style>
 </head>
@@ -261,21 +283,11 @@
 <header>
   <nav class="nav">
     <a href="#top" class="logo-wrap">
-      <!-- لوگو -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60">
-        <g>
-          <path d="M4 52 L22 8 L40 52 L32 52 L22 28 L12 52 Z" fill="#D32F2F"/>
-          <rect x="14" y="38" width="16" height="4" fill="#1C1B1F"/>
-        </g>
-        <text x="52" y="28" font-family="Vazirmatn, Arial, sans-serif"
-              font-size="17" font-weight="700" fill="#1C1B1F">ARON TAJIHZ</text>
-        <text x="52" y="42" font-family="Vazirmatn, Arial, sans-serif"
-              font-size="8" font-weight="400" fill="#5F6368" letter-spacing="1.2">
-          MEDICAL INSTRUMENT
-        </text>
-        <text x="52" y="56" font-family="Vazirmatn, Arial, sans-serif"
-              font-size="11" font-weight="600" fill="#D32F2F">آرون تجهیز طب</text>
-      </svg>
+      <div class="logo-mark">A</div>
+      <div class="logo-text">
+        <strong>آرون تجهیز طب</strong>
+        <span>ARON TAJIHZ</span>
+      </div>
     </a>
     <div class="nav-links">
       <a href="#products">محصولات</a>
@@ -288,6 +300,7 @@
 <!-- ===== Hero ===== -->
 <section class="hero" id="top">
   <div>
+    <span class="hero-badge">الکتروسرجری تخصصی</span>
     <h1>تجهیزات و ملزومات <span>الکتروسرجری</span></h1>
     <p>
       آرون تجهیز طب، تأمین‌کننده و پشتیبان دستگاه‌های الکتروسرجری، هندپیس، پدال،
@@ -299,14 +312,15 @@
     </div>
   </div>
   <div class="hero-visual">
-    <div class="placeholder">جای تصویر دستگاه الکتروسرجری</div>
+    <img src="images/excellence80.jpg" alt="دستگاه الکتروسرجری Excellence 80">
   </div>
 </section>
 
 <!-- ===== Products ===== -->
-<section id="products">
+<section id="products" class="section-alt">
   <div class="container">
     <div class="section-head">
+      <span class="kicker">PRODUCTS</span>
       <h2>محصولات ما</h2>
       <p>دستگاه‌ها و لوازم الکتروسرجری برای انواع کاربردهای پزشکی</p>
     </div>
@@ -315,7 +329,7 @@
 
       <!-- Excellence 80 -->
       <div class="card">
-        <div class="card-img">جای تصویر دستگاه</div>
+        <div class="card-img"><img src="images/excellence80.jpg" alt="Excellence 80"></div>
         <div class="card-body">
           <h3>دستگاه الکتروسرجری Excellence 80</h3>
           <p class="short">برش مونوپلار، انعقاد مونوپلار و بای‌پلار برای جراحی‌های جزئی.</p>
@@ -331,37 +345,13 @@
             </ul>
             <strong>کاربردها:</strong> جراحی مغز و اعصاب، زنان، چشم، دندانپزشکی، گوش و حلق و بینی، پوست و زیبایی.
           </div>
-          <button class="toggle-btn" onclick="toggleMore(this)">
-            بیشتر <span class="arrow">▼</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Excell Plus -->
-      <div class="card">
-        <div class="card-img">جای تصویر دستگاه</div>
-        <div class="card-body">
-          <h3>دستگاه الکتروسرجری Excell Plus</h3>
-          <p class="short">مناسب الکتروسرجری دندانپزشکی با تنظیم دیجیتال و حالت‌های متنوع.</p>
-          <div class="more-content">
-            <strong>ویژگی‌ها:</strong>
-            <ul>
-              <li>حالت‌های کاری: cut, blend, coag</li>
-              <li>هندپیس و الکترودهای قابل اتوکلاو</li>
-              <li>ولوم صدا دیجیتال و تایمر قابل تنظیم</li>
-              <li>نمایش توان به صورت دیجیتال</li>
-            </ul>
-            <strong>کاربردها:</strong> آماده‌سازی لثه برای قالب‌گیری، برداشت بافت پوشاننده پوسیدگی، جراحی لثه، اصلاح نامتقارنی، سفید کردن دندان‌ها.
-          </div>
-          <button class="toggle-btn" onclick="toggleMore(this)">
-            بیشتر <span class="arrow">▼</span>
-          </button>
+          <button class="toggle-btn" onclick="toggleMore(this)">بیشتر <span class="arrow">▼</span></button>
         </div>
       </div>
 
       <!-- Radonex-i -->
       <div class="card">
-        <div class="card-img">جای تصویر دستگاه</div>
+        <div class="card-img"><img src="images/radonex.jpg" alt="Radonex-i"></div>
         <div class="card-body">
           <h3>دستگاه رادیو سرجری Radonex-i</h3>
           <p class="short">فرکانس کاری ۴.۲ مگاهرتز با حداقل نکروز بافتی و دقت بالا.</p>
@@ -377,37 +367,13 @@
             </ul>
             <strong>ویژگی‌ها:</strong> برش میکرونی با لبه‌های بسیار صاف، حداقل نکروز بافتی، حداقل افزایش دما در موضع جراحی، نمایش شدت خروجی به صورت بارگراف.
           </div>
-          <button class="toggle-btn" onclick="toggleMore(this)">
-            بیشتر <span class="arrow">▼</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Aronex -->
-      <div class="card">
-        <div class="card-img">جای تصویر دستگاه</div>
-        <div class="card-body">
-          <h3>دستگاه الکتروسرجری Aronex</h3>
-          <p class="short">دستگاه الکتروسرجری چندکاره با کاربرد عمومی و تخصصی.</p>
-          <div class="more-content">
-            <strong>ویژگی‌ها:</strong>
-            <ul>
-              <li>برش و انعقاد مونوپلار و بای‌پلار</li>
-              <li>مناسب جراحی‌های عمومی و تخصصی</li>
-              <li>تنظیم دقیق توان خروجی</li>
-              <li>سازگار با انواع هندپیس و الکترود</li>
-            </ul>
-            <strong>کاربردها:</strong> جراحی عمومی، پوست، زیبایی، گوش و حلق و بینی و سایر کاربردهای الکتروسرجری.
-          </div>
-          <button class="toggle-btn" onclick="toggleMore(this)">
-            بیشتر <span class="arrow">▼</span>
-          </button>
+          <button class="toggle-btn" onclick="toggleMore(this)">بیشتر <span class="arrow">▼</span></button>
         </div>
       </div>
 
       <!-- Needle Off -->
       <div class="card">
-        <div class="card-img">جای تصویر دستگاه</div>
+        <div class="card-img"><img src="images/needleoff.jpg" alt="Needle Off"></div>
         <div class="card-body">
           <h3>دستگاه Needle Off</h3>
           <p class="short">دستگاه امحاء ایمن سرسوزن با استفاده از انرژی الکتریکی.</p>
@@ -421,33 +387,107 @@
             </ul>
             <strong>کاربرد:</strong> مناسب بیمارستان‌ها، آزمایشگاه‌ها، مطب‌ها و مراکز درمانی برای دفع ایمن سرسوزن‌های آلوده.
           </div>
-          <button class="toggle-btn" onclick="toggleMore(this)">
-            بیشتر <span class="arrow">▼</span>
-          </button>
+          <button class="toggle-btn" onclick="toggleMore(this)">بیشتر <span class="arrow">▼</span></button>
         </div>
       </div>
 
-      <!-- محصولات جانبی -->
+      <!-- الکترودها -->
       <div class="card">
-        <div class="card-img">جای تصویر لوازم جانبی</div>
+        <div class="card-img"><img src="images/electrodes.jpg" alt="الکترودهای الکتروسرجری"></div>
         <div class="card-body">
-          <h3>لوازم و متعلقات الکتروسرجری</h3>
-          <p class="short">تأمین انواع لوازم جانبی و قطعات مصرفی الکتروسرجری.</p>
+          <h3>الکترودهای الکتروسرجری</h3>
+          <p class="short">انواع الکترود مونوپلار و بای‌پلار برای کاربردهای مختلف جراحی.</p>
           <div class="more-content">
-            <strong>محصولات جانبی:</strong>
+            <strong>انواع الکترود:</strong>
             <ul>
-              <li>الکترودهای مونوپلار و بای‌پلار (انواع مختلف)</li>
-              <li>کابل هندپیس</li>
-              <li>قلم الکتروسرجری</li>
-              <li>پدال تک‌کاناله و دوکاناله</li>
+              <li>الکترود حلقه‌ای (Loop)</li>
+              <li>الکترود سوزنی (Needle)</li>
+              <li>الکترود مربعی (Square)</li>
+              <li>الکترود کروی (Ball)</li>
+              <li>الکترود تیغه‌ای (Blade)</li>
+            </ul>
+            <strong>سازگاری:</strong> قابل استفاده با انواع هندپیس و دستگاه‌های الکتروسرجری.
+          </div>
+          <button class="toggle-btn" onclick="toggleMore(this)">بیشتر <span class="arrow">▼</span></button>
+        </div>
+      </div>
+
+      <!-- هندپیس / قلم -->
+      <div class="card">
+        <div class="card-img"><img src="images/handpiece.jpg" alt="قلم و هندپیس الکتروسرجری"></div>
+        <div class="card-body">
+          <h3>قلم و هندپیس الکتروسرجری</h3>
+          <p class="short">قلم الکتروسرجری با کابل و اتصال استاندارد، مناسب انواع الکترود.</p>
+          <div class="more-content">
+            <strong>ویژگی‌ها:</strong>
+            <ul>
+              <li>بدنه سبک و ارگونومیک</li>
+              <li>دکمه‌های برش و انعقاد</li>
+              <li>کابل با اتصال استاندارد</li>
+              <li>سازگار با الکترودهای قابل اتوکلاو</li>
+            </ul>
+            <strong>کاربرد:</strong> برش و انعقاد در جراحی‌های عمومی، پوست، زیبایی و دندانپزشکی.
+          </div>
+          <button class="toggle-btn" onclick="toggleMore(this)">بیشتر <span class="arrow">▼</span></button>
+        </div>
+      </div>
+
+      <!-- پدال -->
+      <div class="card">
+        <div class="card-img"><img src="images/pedal.jpg" alt="پدال الکتروسرجری"></div>
+        <div class="card-body">
+          <h3>پدال الکتروسرجری (Foot Switch)</h3>
+          <p class="short">پدال کنترل دستگاه الکتروسرجری مدل XP-201.</p>
+          <div class="more-content">
+            <strong>ویژگی‌ها:</strong>
+            <ul>
+              <li>مدل: XP-201</li>
+              <li>بدنه مقاوم و ضد لغزش</li>
+              <li>کابل با اتصال DIN استاندارد</li>
+              <li>مناسب انواع دستگاه‌های الکتروسرجری</li>
+            </ul>
+            <strong>کاربرد:</strong> کنترل برش و انعقاد بدون نیاز به دست.
+          </div>
+          <button class="toggle-btn" onclick="toggleMore(this)">بیشتر <span class="arrow">▼</span></button>
+        </div>
+      </div>
+
+      <!-- کابل و متعلقات -->
+      <div class="card">
+        <div class="card-img"><img src="images/cables.jpg" alt="کابل و متعلقات الکتروسرجری"></div>
+        <div class="card-body">
+          <h3>کابل و متعلقات الکتروسرجری</h3>
+          <p class="short">کابل‌های اتصال، کابل هندپیس و سایر متعلقات الکتروسرجری.</p>
+          <div class="more-content">
+            <strong>محصولات:</strong>
+            <ul>
+              <li>کابل هندپیس مونوپلار</li>
+              <li>کابل بای‌پلار</li>
+              <li>کابل پلیت بیمار</li>
+              <li>کابل پدال</li>
+            </ul>
+            <strong>سازگاری:</strong> مناسب انواع دستگاه‌های الکتروسرجری.
+          </div>
+          <button class="toggle-btn" onclick="toggleMore(this)">بیشتر <span class="arrow">▼</span></button>
+        </div>
+      </div>
+
+      <!-- سایر لوازم -->
+      <div class="card">
+        <div class="card-img"><img src="images/plate.jpg" alt="پلیت و سایر لوازم"></div>
+        <div class="card-body">
+          <h3>پلیت بیمار و سایر لوازم</h3>
+          <p class="short">پلیت بیمار و سایر لوازم جانبی الکتروسرجری.</p>
+          <div class="more-content">
+            <strong>محصولات:</strong>
+            <ul>
               <li>پلیت بیمار (Single Plate)</li>
               <li>پنس بای‌پلار (Bipolar Forceps)</li>
               <li>هندپیس مونوپلار و بای‌پلار</li>
+              <li>الکترودهای مصرفی</li>
             </ul>
           </div>
-          <button class="toggle-btn" onclick="toggleMore(this)">
-            بیشتر <span class="arrow">▼</span>
-          </button>
+          <button class="toggle-btn" onclick="toggleMore(this)">بیشتر <span class="arrow">▼</span></button>
         </div>
       </div>
 
@@ -456,31 +496,19 @@
 </section>
 
 <!-- ===== Services ===== -->
-<section id="services" class="services">
+<section id="services">
   <div class="container">
     <div class="section-head">
-      <h2>خدمات و تعمیرات آرون تجهیز طب</h2>
+      <span class="kicker">SERVICES</span>
+      <h2>خدمات و تعمیرات</h2>
       <p>پشتیبانی کامل و تخصصی از دستگاه‌های الکتروسرجری</p>
     </div>
-  </div>
 
-  <div class="repair-highlight">
-    <div class="big-icon">🔧</div>
-    <div>
-      <h3>تعمیرات تخصصی الکتروسرجری</h3>
-      <p>
-        تعمیر انواع دستگاه‌های الکتروسرجری، رادیو سرجری، هندپیس، پدال و لوازم جانبی
-        با قطعات اصلی و تضمین کیفیت. عیب‌یابی دقیق، سرویس دوره‌ای و تأمین قطعات یدکی.
-      </p>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="service-list">
+    <div class="service-grid">
       <div class="service-item">
         <div class="icon">🔧</div>
         <h3>تعمیرات تخصصی</h3>
-        <p>تعمیر انواع دستگاه‌های الکتروسرجری، رادیو سرجری و Aronex.</p>
+        <p>تعمیر انواع دستگاه‌های الکتروسرجری و رادیو سرجری.</p>
       </div>
       <div class="service-item">
         <div class="icon">🛠️</div>
@@ -508,18 +536,31 @@
         <p>تأمین الکترود، کابل، پلیت و لوازم جانبی.</p>
       </div>
     </div>
+
+    <div class="repair-banner">
+      <div class="big-icon">🔧</div>
+      <div>
+        <h3>تعمیرات تخصصی الکتروسرجری</h3>
+        <p>
+          تعمیر انواع دستگاه‌های الکتروسرجری، رادیو سرجری، هندپیس، پدال و لوازم جانبی
+          با قطعات اصلی و تضمین کیفیت. عیب‌یابی دقیق، سرویس دوره‌ای و تأمین قطعات یدکی.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ===== Contact CTA ===== -->
-<section id="contact" style="padding-top:0;">
-  <div class="cta">
-    <h2>برای استعلام قیمت یا درخواست خدمات تماس بگیرید</h2>
-    <p>پاسخگویی به خرید، تعمیر و سرویس دستگاه‌های الکتروسرجری</p>
-    <div class="cta-buttons">
-      <a href="tel:09353865756" class="btn">📞 ۰۹۳۵۳۸۶۵۷۵۶</a>
-      <a href="https://wa.me/989353865756" class="btn btn-wa" target="_blank">واتساپ</a>
-      <a href="https://instagram.com/arontajhiz" class="btn btn-ig" target="_blank">اینستاگرام</a>
+<!-- ===== Contact ===== -->
+<section id="contact" class="section-alt">
+  <div class="container">
+    <div class="contact-card">
+      <h2>برای استعلام قیمت یا درخواست خدمات تماس بگیرید</h2>
+      <p>پاسخگویی به خرید، تعمیر و سرویس دستگاه‌های الکتروسرجری</p>
+      <div class="contact-buttons">
+        <a href="tel:09353865756" class="btn btn-tel">📞 ۰۹۳۵۳۸۶۵۷۵۶</a>
+        <a href="https://wa.me/989353865756" class="btn btn-wa" target="_blank">واتساپ</a>
+        <a href="https://instagram.com/arontajhiz" class="btn btn-ig" target="_blank">اینستاگرام</a>
+      </div>
     </div>
   </div>
 </section>
@@ -528,22 +569,7 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-logo">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60">
-          <g>
-            <path d="M4 52 L22 8 L40 52 L32 52 L22 28 L12 52 Z" fill="#D32F2F"/>
-            <rect x="14" y="38" width="16" height="4" fill="#FFFFFF"/>
-          </g>
-          <text x="52" y="28" font-family="Vazirmatn, Arial, sans-serif"
-                font-size="17" font-weight="700" fill="#FFFFFF">ARON TAJIHZ</text>
-          <text x="52" y="42" font-family="Vazirmatn, Arial, sans-serif"
-                font-size="8" font-weight="400" fill="#B0B0B0" letter-spacing="1.2">
-            MEDICAL INSTRUMENT
-          </text>
-          <text x="52" y="56" font-family="Vazirmatn, Arial, sans-serif"
-                font-size="11" font-weight="600" fill="#D32F2F">آرون تجهیز طب</text>
-        </svg>
-      </div>
+      <h4>آرون تجهیز طب</h4>
       <p>تأمین و پشتیبانی تجهیزات و ملزومات الکتروسرجری؛ فروش، تعمیر و سرویس.</p>
     </div>
     <div>
