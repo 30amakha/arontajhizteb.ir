@@ -27,10 +27,13 @@
 <meta name="twitter:description" content="تأمین، فروش، تعمیر و سرویس تجهیزات الکتروسرجری">
 <meta name="twitter:image" content="https://arontajhizteb.ir/images/excellence80.jpg">
 
-<!-- ===== Font ===== -->
+<!-- ===== Preconnect & Preload ===== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/excellence80.jpg" fetchpriority="high">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap"></noscript>
 
 <!-- ===== Schema Markup ===== -->
 <script type="application/ld+json">
@@ -83,11 +86,13 @@
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    font-family:'Vazirmatn',sans-serif;
+    font-family:'Vazirmatn',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;
+    font-display:swap;
     background:var(--bg);
     color:var(--text);
     line-height:1.75;
     -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
   }
   a{text-decoration:none;color:inherit;}
   img{max-width:100%;display:block;}
@@ -166,7 +171,8 @@
     padding:16px;
   }
   .hero-visual img{
-    width:100%;max-width:480px;
+    width:100%;max-width:480px;height:auto;
+    aspect-ratio:4/3;object-fit:contain;
     border-radius:20px;
   }
 
@@ -370,7 +376,7 @@
     </div>
   </div>
   <div class="hero-visual">
-    <img src="images/excellence80.jpg" alt="دستگاه الکتروسرجری Excellence 80 - برش و انعقاد مونوپلار و بای‌پلار">
+    <img src="images/excellence80.jpg" alt="دستگاه الکتروسرجری Excellence 80 - برش و انعقاد مونوپلار و بای‌پلار" width="480" height="360" fetchpriority="high" decoding="async">
   </div>
 </section>
 
@@ -387,7 +393,7 @@
 
       <!-- Excellence 80 -->
       <div class="card">
-        <div class="card-img"><img src="images/excellence80.jpg" alt="دستگاه الکتروسرجری Excellence 80 - برش و انعقاد مونوپلار و بای‌پلار" loading="lazy"></div>
+        <div class="card-img"><img src="images/excellence80.jpg" alt="دستگاه الکتروسرجری Excellence 80 - برش و انعقاد مونوپلار و بای‌پلار" width="400" height="300" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>دستگاه الکتروسرجری Excellence 80</h3>
           <p class="short">برش مونوپلار، انعقاد مونوپلار و بای‌پلار برای جراحی‌های جزئی.</p>
@@ -409,7 +415,7 @@
 
       <!-- Radonex-i -->
       <div class="card">
-        <div class="card-img"><img src="images/radonex.jpg" alt="دستگاه رادیو سرجری Radonex-i - فرکانس ۴.۲ مگاهرتز" loading="lazy"></div>
+        <div class="card-img"><img src="images/radonex.jpg" alt="دستگاه رادیو سرجری Radonex-i - فرکانس ۴.۲ مگاهرتز" width="400" height="300" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>دستگاه رادیو سرجری Radonex-i</h3>
           <p class="short">فرکانس کاری ۴.۲ مگاهرتز با حداقل نکروز بافتی و دقت بالا.</p>
@@ -431,7 +437,7 @@
 
       <!-- Needle Off -->
       <div class="card">
-        <div class="card-img"><img src="images/needleoff.jpg" alt="دستگاه امحاء سرسوزن Needle Off - دفع ایمن سرسوزن" loading="lazy"></div>
+        <div class="card-img"><img src="images/needleoff.jpg" alt="دستگاه امحاء سرسوزن Needle Off - دفع ایمن سرسوزن" width="400" height="300" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>دستگاه Needle Off</h3>
           <p class="short">دستگاه امحاء ایمن سرسوزن با استفاده از انرژی الکتریکی.</p>
@@ -451,7 +457,7 @@
 
       <!-- الکترودها -->
       <div class="card">
-        <div class="card-img"><img src="images/electrodes.jpg" alt="الکترودهای الکتروسرجری مونوپلار و بای‌پلار" loading="lazy"></div>
+        <div class="card-img"><img src="images/electrodes.jpg" alt="الکترودهای الکتروسرجری مونوپلار و بای‌پلار" width="400" height="300" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>الکترودهای الکتروسرجری</h3>
           <p class="short">انواع الکترود مونوپلار و بای‌پلار برای کاربردهای مختلف جراحی.</p>
@@ -472,7 +478,7 @@
 
       <!-- هندپیس / قلم -->
       <div class="card">
-        <div class="card-img"><img src="images/handpiece.jpg" alt="قلم و هندپیس الکتروسرجری با کابل استاندارد" loading="lazy"></div>
+        <div class="card-img"><img src="images/handpiece.jpg" alt="قلم و هندپیس الکتروسرجری با کابل استاندارد" width="400" height="300" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>قلم و هندپیس الکتروسرجری</h3>
           <p class="short">قلم الکتروسرجری با کابل و اتصال استاندارد، مناسب انواع الکترود.</p>
@@ -492,7 +498,7 @@
 
       <!-- پدال -->
       <div class="card">
-        <div class="card-img"><img src="images/pedal.jpg" alt="پدال الکتروسرجری مدل XP-201 - فوت سوئیچ" loading="lazy"></div>
+        <div class="card-img"><img src="images/pedal.jpg" alt="پدال الکتروسرجری مدل XP-201 - فوت سوئیچ" width="400" height="300" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>پدال الکتروسرجری (Foot Switch)</h3>
           <p class="short">پدال کنترل دستگاه الکتروسرجری مدل XP-201.</p>
@@ -512,7 +518,7 @@
 
       <!-- کابل و متعلقات -->
       <div class="card">
-        <div class="card-img"><img src="images/cables.jpg" alt="کابل هندپیس و کابل‌های اتصال الکتروسرجری" loading="lazy"></div>
+        <div class="card-img"><img src="images/cables.jpg" alt="کابل هندپیس و کابل‌های اتصال الکتروسرجری" width="400" height="300" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>کابل و متعلقات الکتروسرجری</h3>
           <p class="short">کابل‌های اتصال، کابل هندپیس و سایر متعلقات الکتروسرجری.</p>
@@ -532,7 +538,7 @@
 
       <!-- پلیت و لوازم -->
       <div class="card">
-        <div class="card-img"><img src="images/plate.jpg" alt="پلیت بیمار و لوازم جانبی الکتروسرجری" loading="lazy"></div>
+        <div class="card-img"><img src="images/plate.jpg" alt="پلیت بیمار و لوازم جانبی الکتروسرجری" width="400" height="300" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <h3>پلیت بیمار و سایر لوازم</h3>
           <p class="short">پلیت بیمار و سایر لوازم جانبی الکتروسرجری.</p>
@@ -613,50 +619,4 @@
   <div class="container">
     <div class="contact-card">
       <h2>تماس و استعلام قیمت</h2>
-      <p>پاسخگویی به خرید، تعمیر و سرویس دستگاه‌های الکتروسرجری</p>
-      <div class="contact-buttons">
-        <a href="tel:09353865756" class="btn btn-tel">📞 ۰۹۳۵۳۸۶۵۷۵۶</a>
-        <a href="https://wa.me/989353865756" class="btn btn-wa" target="_blank" rel="noopener">واتساپ</a>
-        <a href="https://instagram.com/arontajhiz" class="btn btn-ig" target="_blank" rel="noopener">اینستاگرام</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Footer ===== -->
-<footer>
-  <div class="footer-inner">
-    <div>
-      <h4>آرون تجهیز طب</h4>
-      <p>تأمین و پشتیبانی تجهیزات و ملزومات الکتروسرجری؛ فروش، تعمیر و سرویس.</p>
-    </div>
-    <div>
-      <h4>دسترسی سریع</h4>
-      <a href="#products">محصولات</a><br>
-      <a href="#services">خدمات و تعمیرات</a><br>
-      <a href="#contact">تماس با ما</a>
-    </div>
-    <div>
-      <h4>تماس</h4>
-      <p>تلفن / واتساپ: ۰۹۳۵۳۸۶۵۷۵۶</p>
-      <p>اینستاگرام: arontajhiz</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    © ۱۴۰۴ آرون تجهیز طب — تمامی حقوق محفوظ است.
-  </div>
-</footer>
-
-<script>
-  function toggleMore(btn){
-    const content = btn.previousElementSibling;
-    const isOpen = content.classList.toggle('open');
-    btn.classList.toggle('open', isOpen);
-    btn.innerHTML = isOpen
-      ? 'بستن <span class="arrow">▼</span>'
-      : 'بیشتر <span class="arrow">▼</span>';
-  }
-</script>
-
-</body>
-</html>
+      <p>پاسخگویی به خرید، تعمیر و
